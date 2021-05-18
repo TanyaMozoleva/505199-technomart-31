@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Tatiana Mozoleva](https://up.htmlacademy.ru/htmlcss/31/user/505199).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Вадясова](https://htmlacademy.ru/profile/ad0v0).
 
 ---
 
