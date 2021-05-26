@@ -2,13 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
+    <title>Catalog/Техномарт</title>
   </head>
   <body>
     <header class="header">
       <nav class="header-top">
-        <a href="#">ТЕХНОМАРТ</a>
-        <input type="text" name="search" placeholder="Поиск:">
+        <a class=" logo" href="index.html">ТЕХНОМАРТ</a>
+        <form action="#" method="get">
+          <input type="text" name="search" placeholder="Поиск:">
+        </form>
         <a href="#">Закладки: 0</a>
         <a href="#">Корзина: 10</a>
         <a href="#">Оформить заказ</a>
@@ -16,7 +18,7 @@
       <nav class="header-middle">
         <p>Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
         <section>
-          <a href="#">+7 800 555-86-28</a>
+          <a href="tel:+78005558628">+7 800 555-86-28</a>
           <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
         </section>
         <div class="header-user">
@@ -36,9 +38,10 @@
       </ul>
     </header>
     <main>
-      <ul>
+      <ul class="breadcrumbs">
+        <li><a href="#">home</a></li>
         <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="index.html">Инструмент</a></li>
+        <li><a href="#">Инструмент</a></li>
         <li><a>Перфораторы</a></li>
       </ul>
 
@@ -46,28 +49,26 @@
         <h2 class="headline-catalog-name">ПЕРФОРАТОРЫ</h2>
       </section>
 
-      <section class="filter-headline">
-        <a href="#">ФИЛЬТР:</a>
-        <a href="#">СОРТИРОВКА:
-          <ul>
-            <li><a href="#">ПО ЦЕНЕ</a></li>
-            <li><a href="#">ПО ТИПУ</a></li>
-            <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
-          </ul>
-        </a>
-      </section>
+      <div class="sort">
+        <a href="#">СОРТИРОВКА:</a>
+        <ul>
+          <li><a href="#">ПО ЦЕНЕ</a></li>
+          <li><a href="#">ПО ТИПУ</a></li>
+          <li><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
+        </ul>
+      </div>
 
       <section class="filter">
+        <a href="#">ФИЛЬТР:</a>
         <form method="get" action="#">
 
           <fieldset class="filter-price">
-            <div class="price-field">
-              <input type="range" min="0" max="30000" value="0" id="lower">
-              <input type="range" min="0" max="30000" value="25000" id="upper">
-              <div class="price-box">
-                <label for="one"></label>
-                <input id="one">
-              </div>
+            <div class="price-range">
+              <input type="range" min="0" max="30000" value="0">
+            </div>
+            <div class="price-controls">
+              <input class="min-price" type="text" value="0"> -
+              <input class="max-price" type="text" value="30000">
             </div>
           </fieldset>
 
@@ -111,14 +112,14 @@
             </ul>
           </fieldset>
 
-          <button type="submit">ПОКАЗАТЬ</button>
+          <button type="submit" formaction="https://echo.htmlacademy.ru/">ПОКАЗАТЬ</button>
         </form>
 
       </section>
 
       <section class="prodacts">
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="144" height="128" alt="bosch6000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/144x128" alt="bosch6000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -129,7 +130,7 @@
         </section>
 
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="144" height="128" alt="bosch6000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/144x128" alt="bosch6000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -140,7 +141,7 @@
         </section>
 
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="144" height="128" alt="bosch6000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/144x128" alt="bosch6000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -151,7 +152,7 @@
         </section>
 
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="127" height="112" alt="bosch3000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/127x112" alt="bosch3000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -162,7 +163,7 @@
         </section>
 
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="144" height="128" alt="bosch6000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/144x128" alt="bosch6000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -173,7 +174,7 @@
         </section>
 
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="127" height="112" alt="bosch2000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/127x112" alt="bosch2000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -183,7 +184,7 @@
         </section>
 
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="127" height="112" alt="bosch3000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/127x112" alt="bosch3000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -194,7 +195,7 @@
         </section>
 
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="144" height="128" alt="bosch6000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/144x128" alt="bosch6000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -205,7 +206,7 @@
         </section>
 
         <section class="prodacts-item">
-          <img class="prodacts-item-img" src="" width="127" height="112" alt="bosch2000">
+          <img class="prodacts-item-img" src="https://via.placeholder.com/127x112" alt="bosch2000">
           <div class="prodacts-option">
             <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
             <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
@@ -243,9 +244,8 @@
         </ul>
       </section>
       <section class="footer-middle">
-        <p class="footer-middle-contacts">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>
-          <a href="tel:+78005558628">+7 800 555-86-28</a>
-        </p>
+        <p class="footer-middle-contacts">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
         <ul class="footer-middle-menu">
           <li class="footer-middle-menu-item"><a class="footer-middle-menu-link" href="#">Материалы</a></li>
           <li class="footer-middle-menu-item"><a class="footer-middle-menu-link" href="#">Техника</a></li>
@@ -263,12 +263,12 @@
       </section>
 
       <section class="footer-bottom-feedback">
-        <p>Обратная связь:<br>
+        <p>Обратная связь:
           <a class="footer-bottom-feedback-link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
       </section>
       <section class="footer-bottom-developed">
-        <p>Разработано —<br>
+        <p>Разработано —
           <a class="footer-bottom-developed-link" href="htmlacademy.ru">htmlacademy.ru</a>
         </p>
       </section>
@@ -276,7 +276,7 @@
 
       <section class="popup-cart">
         <h2>Товар добавлен в корзину!</h2>
-        <form>
+        <form action="#" method="get">
           <a href="#">ОФОРМИТЬ ЗАКАЗ</a>
           <a href="catalog.html">ПРОДОЛЖИТЬ ПОКУПКИ</a>
         </form>
