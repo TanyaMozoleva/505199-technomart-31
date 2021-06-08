@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Главная/Техномарт</title>
@@ -7,33 +7,46 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,
+    wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap subset=latin,cyrillic">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body">
     <header class="header">
       <nav class="header-top">
-      <a class=" logo" href="index.html">Техномарт</a>
+        <a class="header-top-link header-top-logo" href="index.html"><img src="img/logo.png" width="108" height="18" alt="Логотип техномарта"></a>
 
-        <form action="https://echo.htmlacademy.ru/" method="get">
-          <input type="text" name="search" placeholder="Поиск:">
+        <form class="header-form-search" action="https://echo.htmlacademy.ru/" method="get">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+            </svg>
+          <input class="header-top-search" type="text" name="search" placeholder="Поиск:">
         </form>
-        <a href="#">Закладки: 0</a>
-        <a href="#">Корзина: 0</a>
-        <a href="#">Оформить заказ</a>
+        <a class="header-top-link header-top-favourite" href="#">Закладки: 0</a>
+        <a class="header-top-link header-top-cart" href="#">Корзина: 0</a>
+        <a class="header-top-link header-top-order" href="#">Оформить заказ</a>
       </nav>
 
       <nav class="header-middle">
-        <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-        <section>
-          <a href="tel:+78005558628">+7 800 555-86-28</a>
-          <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+        <h1 class="header-middle-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <section class="">
+          <a class="header-contacts" href="tel:+78005558628">+7 800 555-86-28</a>
+          <p class="header-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
         </section>
         <div class="header-user">
-          <a class="sigh-in" href="#">Войти</a>
-          <a class="sign-up" href="#">Регистрация</a>
+          <a class="user-page sign-in" href="#">
+            <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5"/>
+              <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z" fill="#C5C5C5"/>
+              </svg>
+            <span class="sign-in">Войти</span>
+          </a>
+          <a class="user-page sign-up" href="#">Регистрация</a>
         </div>
       </nav>
 
-      <ul class="header-menu">
+      <ul class="header-navigation">
         <li><a href="#">Главная</a></li>
         <li><a href="#">Компания</a></li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -50,6 +63,7 @@
           <li class="sections-item sections-item-materials">
             <h2 class="sections-name">Материалы</h2>
             <a class="sections-link" href="#">Hа любой вкус</a>
+            <p class="sections-mark">New</p>
           </li>
           <li class="sections-item sections-item-tools">
             <h2 class="sections-name">Инструмент</h2>
@@ -66,12 +80,12 @@
         <div class="slide slide-1">
           <h2 class="slider-title">Перфораторы</h2>
           <p class="slider-description">Настоящие мужские игрушки</p>
-          <a class="slider-link" href="catalog.html">Открыть каталог</a>
+          <a class="slider-link button" href="catalog.html">Открыть каталог</a>
         </div>
         <div class="slide slide-2">
           <h2 class="slider-title">Дрели</h2>
           <p class="slider-description">Соседям на радость!</p>
-          <a class="slider-link" href="catalog.html">Открыть каталог</a>
+          <a class="slider-link button" href="catalog.html">Открыть каталог</a>
         </div>
         <span class="slider-arrow slider-arrow-prev"></span>
         <span class="slider-arrow slider-arrow-next"></span>
@@ -92,47 +106,47 @@
 
       <section class="headline">
         <h2 class="headline-name">Популярные товары:</h2>
-        <a class="headline-link" href="#">Все популярные товары</a>
+        <a class="headline-link button" href="#">Все популярные товары</a>
       </section>
 
       <section class="products">
         <section class="products-item">
-          <img class="products-item-img" src="img/products/products-item-bosch9000.jpg" width="184" height="164" alt="bosch9000">
+          <img class="products-item-img" src="img/products/products-item-bosch9000.jpg" width="184" height="164" alt="Проводной перфоратор bosch с длинным сверлом">
           <div class="products-option">
-            <a class="ptoducts-option-link-buy" href="#">Купить</a>
-            <a class="ptoducts-option-link-bookmarks" href="#">В закладки</a>
+            <a class="products-option-link-buy" href="#">Купить</a>
+            <a class="products-option-link-bookmarks" href="#">В закладки</a>
           </div>
-          <p class="ptoducts-item-title">Перфоратор BOSCH BFG 9000</p>
+          <p class="products-item-title">Перфоратор BOSCH BFG 9000</p>
           <p class="products-item-price">32500 Р.</p>
           <a class="products-item-link" href="#">25500 Р.</a>
         </section>
         <section class="products-item">
-          <img class="products-item-img" src="img/products/products-item-bosch3000.jpg" width="127" height="112" alt="bosch3000">
+          <img class="products-item-img" src="img/products/products-item-bosch3000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор bosch со сверлом среднего диаметра">
           <div class="products-option">
-            <a class="ptoducts-option-link-buy" href="#">Купить</a>
-            <a class="ptoducts-option-link-bookmarks" href="#">В закладки</a>
+            <a class="products-option-link-buy" href="#">Купить</a>
+            <a class="products-option-link-bookmarks" href="#">В закладки</a>
           </div>
-          <p class="ptoducts-item-title">Перфоратор BOSCH BFG 3000</p>
+          <p class="products-item-title">Перфоратор BOSCH BFG 3000</p>
           <p class="products-item-price">22500 Р.</p>
           <a class="products-item-link" href="#">15500 Р.</a>
         </section>
         <section class="products-item">
-          <img class="products-item-img" src="img/products/products-item-bosch6000.jpg" width="144" height="128" alt="bosch6000">
-          <div class="prodacts-option">
-            <a class="ptodacts-option-link-buy" href="#">Купить</a>
-            <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
+          <img class="products-item-img" src="img/products/products-item-bosch6000.jpg" width="144" height="128" alt="Аккумуляторный перфоратор bosch со сверлом большого диаметра">
+          <div class="products-option">
+            <a class="products-option-link-buy" href="#">Купить</a>
+            <a class="products-option-link-bookmarks" href="#">В закладки</a>
           </div>
-          <p class="ptoducts-item-title">Перфоратор BOSCH BFG 6000</p>
+          <p class="products-item-title">Перфоратор BOSCH BFG 6000</p>
           <p class="products-item-price">30500 Р.</p>
           <a class="products-item-link" href="#">25500 Р.</a>
         </section>
         <section class="products-item">
-          <img class="products-item-img" src="img/products/products-item-bosch2000.jpg" width="127" height="112" alt="bosch2000">
-          <div class="prodacts-option">
-            <a class="ptodacts-option-link-buy" href="#">КУПИТЬ</a>
-            <a class="ptodacts-option-link-bookmarks" href="#">В закладки</a>
+          <img class="products-item-img" src="img/products/products-item-bosch2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор bosch со сверлом малого диаметра">
+          <div class="products-option">
+            <a class="products-option-link-buy" href="#">КУПИТЬ</a>
+            <a class="products-option-link-bookmarks" href="#">В закладки</a>
           </div>
-          <p class="ptoducts-item-title">Перфоратор BOSCH BFG 2000</p>
+          <p class="products-item-title">Перфоратор BOSCH BFG 2000</p>
           <p class="products-item-price">22500 Р.</p>
           <a class="products-item-link" href="#">12500 Р.</a>
         </section>
@@ -140,33 +154,33 @@
 
       <section class="headline">
         <h2 class="headline-name">Популярные производители:</h2>
-        <a class="headline-link" href="#">Все производители</a>
+        <a class="headline-link button" href="#">Все производители</a>
       </section>
 
       <section class="brands">
         <a class="brands-item">
-          <img class="brands-item-img" src="img/brands/brands-item-bosch.jpg" width="126" height="37" alt="bosch">
+          <img class="brands-item-img" src="img/brands/brands-item-bosch.jpg" width="126" height="37" alt="Логотип bosch">
         </a>
         <a class="brands-item">
-          <img class="brands-item-img" src="img/brands/brands-item-makita.jpg" width="123" height="40" alt="makita">
+          <img class="brands-item-img" src="img/brands/brands-item-makita.jpg" width="123" height="40" alt="Логотип makita">
         </a>
         <a class="brands-item">
-          <img class="brands-item-img" src="img/brands/brands-item-dewalt.jpg" width="146" height="44" alt="dewalt">
+          <img class="brands-item-img" src="img/brands/brands-item-dewalt.jpg" width="146" height="44" alt="Логотип dewalt">
         </a>
         <a class="brands-item">
-          <img class="brands-item-img" src="img/brands/brands-item-interskol.jpg" width="200" height="75" alt="interskol">
+          <img class="brands-item-img" src="img/brands/brands-item-interskol.jpg" width="200" height="75" alt="Логотип interskol">
         </a>
         <a class="brands-item">
-          <img class="brands-item-img" src="img/brands/brands-item-hitachi.jpg" width="169" height="31" alt="hitachi">
+          <img class="brands-item-img" src="img/brands/brands-item-hitachi.jpg" width="169" height="31" alt="Логотип hitachi">
         </a>
         <a class="brands-item">
-          <img class="brands-item-img" src="img/brands/brands-item-lg.jpg" width="121" height="73" alt="lg">
+          <img class="brands-item-img" src="img/brands/brands-item-lg.jpg" width="121" height="73" alt="Логотип lg">
         </a>
         <a class="brands-item">
-          <img class="brands-item-img" src="img/brands/brands-item-aeg.jpg" width="151" height="96" alt="aeg">
+          <img class="brands-item-img" src="img/brands/brands-item-aeg.jpg" width="151" height="96" alt="Логотип aeg">
         </a>
         <a class="brands-item">
-          <img class="brands-item-img" src="img/brands/brands-item-metabo.jpg" width="204" height="69" alt="metabo">
+          <img class="brands-item-img" src="img/brands/brands-item-metabo.jpg" width="204" height="69" alt="Логотип metabo">
         </a>
       </section>
 
@@ -203,7 +217,7 @@
             <p class="services-content-description">Залезть в долговую яму стало проще!
                Кредитные консультанты придут вам на помощь.
             </p>
-            <a class="services-content-link" href="#">Отправить заявку</a>
+            <a class="services-content-link button" href="#">Отправить заявку</a>
           </div>
         </div>
       </section>
@@ -220,7 +234,7 @@
             <li class="info-about-item">Автотрейдинг</li>
             <li class="info-about-item">ЖелДорЭкспедиция</li>
           </ul>
-          <a class="info-about-link" href="#">Подробнее о компании</a>
+          <a class="info-about-link button" href="#">Подробнее о компании</a>
         </section>
 
         <section class="info-contacts">
@@ -228,14 +242,14 @@
           <p class="info-contacts-description">Вы можете забрать товар сами,
             заехав в наш офис:</p>
           <img class="info-contacts-map" src="img/bg-map.jpg" width="300" height="158" alt="Наб. Реки Карповки, 5 корпус П, Санкт-Петербург">
-          <a class="info-contacs-link">Заблудились? Напишите нам!</a>
+          <a class="info-contacs-link button">Заблудились? Напишите нам!</a>
         </section>
       </section>
     </main>
 
     <footer class="footer">
       <section class="footer-top">
-        <a class="footer-top-logo"></a>
+        <a class="footer-top-logo" href="index.html"><img src="img/logo.png" width="108" height="18" alt="Логотип техномарта"></a>
         <ul class="footer-top-menu">
           <li class="footer-top-menu-item"><a class="footer-top-menu-link" href="#">Компания</a></li>
           <li class="footer-top-menu-item"><a class="footer-top-menu-link" href="#">Новости</a></li>
@@ -247,7 +261,7 @@
 
       <section class="footer-middle">
         <p class="footer-middle-contacts">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <ul class="footer-middle-menu">
           <li class="footer-middle-menu-item"><a class="footer-middle-menu-link" href="#">Материалы</a></li>
           <li class="footer-middle-menu-item"><a class="footer-middle-menu-link" href="#">Техника</a></li>
@@ -259,44 +273,63 @@
       <section class="footer-bottom">
         <p class="footer-bottom-copyright">© 2010–2021 Компания «Техномарт»<br>Все права защищены</p>
         <ul class="footer-bottom-socials">
-          <li class="footer-bottom-socials-item"><a class="footer-bottom-socials-link socials-item-vkontakte" href="#">vkontakte</a></li>
-          <li class="footer-bottom-socials-item"><a class="footer-bottom-socials-link socials-item-facebook" href="#">facebook</a></li>
-          <li class="footer-bottom-socials-item"><a class="footer-bottom-socials-link socials-item-instagram" href="#">instagram</a></li>
+          <li class="footer-bottom-socials-item">
+            <a class="footer-bottom-socials-link socials-item-vkontakte" href="#"></a>
+          </li>
+          <li class="footer-bottom-socials-item">
+            <a class="footer-bottom-socials-link socials-item-facebook" href="#"></a>
+          </li>
+          <li class="footer-bottom-socials-item">
+            <a class="footer-bottom-socials-link socials-item-instagram" href="#"></a>
+          </li>
         </ul>
-      </section>
 
-      <section class="footer-bottom-feedback">
+        <section class="footer-bottom-feedback">
         <p>Обратная связь:
           <a class="footer-bottom-feedback-link" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </p>
-      </section>
+        </section>
 
-      <section class="footer-bottom-developed">
+        <section class="footer-bottom-developed">
         <p>Разработано —
           <a class="footer-bottom-developed-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
         </p>
+        </section>
       </section>
     </footer>
 
-    <section class="form-popup-feedback" id="myform">
-      <form action="https://echo.htmlacademy.ru/" method="get">
+    <section class="modal modal-feedback" id="myform">
+      <div class="modal-feedback-top"></div>
+      <form class="login-form" action="https://echo.htmlacademy.ru/" method="get">
         <p>
           <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+          <input class="login-icon-name" type="name" id="name" name="name" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="mail">Ваш e-mail:</label>
-          <input type="email" id="mail" name="login" placeholder="email@example.com">
+          <input class="login-icon-mail" type="email" id="mail" name="login" placeholder="email@example.com">
         </p>
         <p>
           <label for="text">Текст письма:</label>
           <input type="text" id="text" name="text" placeholder="В свободной форме">
         </p>
+        <div class="modal-bottom">
+          <button class="modal-bottom-button button" type="button">Отправить</button>
+        </div>
       </form>
-      <button type="button">Отправить</button>
+      <button class="modal-close" type="button"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
+        </svg>
+      </button>
+
     </section>
 
-    <section  class="map" id="map">
+    <section  class=" modal modal-map" id="map">
+      <div class="modal-map-top"></div>
+      <button class="modal-close" type="button"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
+        </svg>
+      </button>
     </section>
   </body>
 </html>
