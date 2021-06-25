@@ -214,10 +214,13 @@ display: grid;
 }
 
 .header-contacts {
+  display: block;
+  box-sizing: border-box;
   grid-column-start: 2;
   grid-row-start: 1;
   width: 270px;
   height: 45px;
+  margin-bottom: 3px;
   color: var(--basic-red);
   font-size: 21px;
   line-height: 30px;
@@ -235,14 +238,24 @@ display: grid;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 /*----------Header-user----------*/
 
 .header-user {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
 }
+
+.header-user-main {
+  width: 299px;
+  height: 45px;
+  background-color: var(--basic-white);
+  margin-bottom: 7px;
+}
+
 .user-page {
   color: var(--basic-black);
   font-size: 21px;
@@ -284,6 +297,19 @@ display: grid;
 
 .user-page-name:hover {
   color: var(--basic-black);
+}
+
+.header-user-additional {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 210px;
+}
+
+.user-orders::after {
+  display: block;
+  background-image: url("../img/icons/icon-dot.svg");
+  background-repeat: no-repeat;
 }
 
 .user-orders,
@@ -485,7 +511,6 @@ display: grid;
 .sort {
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
   width: 700px;
   height: 38px;
   background-color: var(--background-light-gray);
@@ -512,12 +537,13 @@ display: grid;
 .sort-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  width: 494px;
   font-family: "PT Sans";
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  margin-left: 140px;
 }
 
 .sort-link {
@@ -528,6 +554,7 @@ display: grid;
   flex-wrap: wrap;
   justify-content: space-between;
   color: var(--basic-black-opacity);
+  margin-right: 46px;
 }
 
 .sort-link:hover {
@@ -538,21 +565,21 @@ display: grid;
   color: var(--basic-red);
 }
 
-.triangle-top {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 11px solid var(--basic-light-grey);
+.sort-triangle {
+  display: flex;
+  width: 50px;
+  margin-right: 14px;
+  justify-content: space-between;
+  outline: 5px solid red;
+  outline-offset: -5px;
 }
 
-.triangle-bottom {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 11px solid var(--basic-light-grey);
+triangle-top {
+  display: block;
+  margin-right: 21px;
 }
+
+
 
 .triangle-top:hover,
 .triangle-bottom:hover {
