@@ -20,10 +20,11 @@
             <a class="header-top-link header-top-logo" href="index.html"><img src="img/logo.png" width="108" height="18" alt="Логотип техномарта"></a>
 
             <form class="header-form-search" action="https://echo.htmlacademy.ru/" method="get">
-              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="search-img" fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
-              </svg>
-              <input class="header-top-search" type="text" name="search" placeholder="Поиск:">
+              </svg> -->
+              <input class="header-top-search" type="search" name="header-search" id="header-search">
+              <label for="header-search">Поиск:</label>
             </form>
             <a class="header-top-link header-top-favourite" href="#">Закладки: 0</a>
             <a class="header-top-link header-top-cart" href="#">Корзина: 10</a>
@@ -221,8 +222,12 @@
                     </div>
                     <section class="product-description">
                       <p class="products-title">Перфоратор BOSCH BFG 6000</p>
-                      <p class="products-price">30500 Р.</p>
-                      <a class="products-link" href="#">25500 Р.</a>
+                      <div class="price-old">
+                        <p class="products-price">30500 Р.</p>
+                      </div>
+                      <div class="price-new">
+                        <a class="products-link" href="#">25500 Р.</a>
+                      </div>
                     </section>
                   </article>
                 </li>
@@ -237,8 +242,12 @@
                     </div>
                     <section class="product-description">
                       <p class="products-title">Перфоратор BOSCH BFG 6000</p>
-                      <p class="products-price">30500 Р.</p>
-                      <a class="products-link" href="#">25500 Р.</a>
+                      <div class="price-old">
+                        <p class="products-price">30500 Р.</p>
+                      </div>
+                      <div class="price-new">
+                        <a class="products-link" href="#">25500 Р.</a>
+                      </div>
                     </section>
                   </article>
                 </li>
@@ -270,58 +279,12 @@
                     </div>
                     <section class="product-description">
                       <p class="products-title">Перфоратор BOSCH BFG 3000</p>
-                      <p class="products-price">22500 Р.</p>
-                      <a class="products-link" href="#">15500 Р.</a>
-                      <!-- <p class="mark-new">New</p> -->
-                    </section>
-                  </article>
-                </li>
-                <li class="catalog-item">
-                  <article class="product">
-                    <div class="product-image-wrapper">
-                      <img class="product-img" src="img/products/products-item-bosch6000.jpg" width="144" height="128" alt="Аккумуляторный перфоратор bosch со сверлом большого диаметра">
-                    </div>
-                    <div class="product-option">
-                      <a class="product-option-link-buy" href="#">Купить</a>
-                      <a class="product-option-link-bookmarks" href="#">В закладки</a>
-                    </div>
-                    <section class="product-description">
-                      <p class="products-title">Перфоратор BOSCH BFG 6000</p>
-                      <p class="products-price">30500 Р.</p>
-                      <a class="products-link" href="#">25500 Р.</a>
-                    </section>
-                  </article>
-                </li>
-                <li class="catalog-item">
-                  <article class="product">
-                    <div class="product-image-wrapper">
-                      <img class="product-img" src="img/products/products-item-bosch2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор bosch со сверлом малого диаметра">
-                    </div>
-                    <div class="product-option">
-                      <a class="product-option-link-buy" href="#">Купить</a>
-                      <a class="product-option-link-bookmarks" href="#">В закладки</a>
-                    </div>
-                    <section class="product-description">
-                      <p class="products-title">Перфоратор BOSCH BFG 2000</p>
-                      <p class="products-price price-hidden">22500 Р.</p>
-                      <a class="products-link" href="#">12500 Р.</a>
-                      <!-- <p class="mark-new">New</p> -->
-                    </section>
-                  </article>
-                </li>
-                <li class="catalog-item">
-                  <article class="product">
-                    <div class="product-image-wrapper">
-                      <img class="product-img" src="img/products/products-item-bosch3000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор bosch со сверлом среднего диаметра">
-                    </div>
-                    <div class="product-option">
-                      <a class="product-option-link-buy" href="#">Купить</a>
-                      <a class="product-option-link-bookmarks" href="#">В закладки</a>
-                    </div>
-                    <section class="product-description">
-                      <p class="products-title">Перфоратор BOSCH BFG 3000</p>
-                      <p class="products-price">22500 Р.</p>
-                      <a class="products-link" href="#">15500 Р.</a>
+                      <div class="price-old">
+                        <p class="products-price">22500 Р.</p>
+                      </div>
+                      <div class="price-new">
+                        <a class="products-link" href="#">15500 Р.</a>
+                      </div>
                       <p class="mark-new">New</p>
                     </section>
                   </article>
@@ -337,8 +300,12 @@
                     </div>
                     <section class="product-description">
                       <p class="products-title">Перфоратор BOSCH BFG 6000</p>
-                      <p class="products-price">30500 Р.</p>
-                      <a class="products-link" href="#">25500 Р.</a>
+                      <div class="price-old">
+                        <p class="products-price">30500 Р.</p>
+                      </div>
+                      <div class="price-new">
+                        <a class="products-link" href="#">25500 Р.</a>
+                      </div>
                     </section>
                   </article>
                 </li>
@@ -353,9 +320,75 @@
                     </div>
                     <section class="product-description">
                       <p class="products-title">Перфоратор BOSCH BFG 2000</p>
-                      <p class="products-price price-hidden">22500 Р.</p>
-                      <a class="products-link" href="#">12500 Р.</a>
-                      <!-- <p class="mark-new">New</p> -->
+                      <div class="price-old">
+                        <p class="products-price"></p>
+                      </div>
+                      <div class="price-new">
+                        <a class="products-link" href="#">12500 Р.</a>
+                      </div>
+                      <p class="mark-new">New</p>
+                    </section>
+                  </article>
+                </li>
+                <li class="catalog-item">
+                  <article class="product">
+                    <div class="product-image-wrapper">
+                      <img class="product-img" src="img/products/products-item-bosch3000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор bosch со сверлом среднего диаметра">
+                    </div>
+                    <div class="product-option">
+                      <a class="product-option-link-buy" href="#">Купить</a>
+                      <a class="product-option-link-bookmarks" href="#">В закладки</a>
+                    </div>
+                    <section class="product-description">
+                      <p class="products-title">Перфоратор BOSCH BFG 3000</p>
+                      <div class="price-old">
+                        <p class="products-price">22500 Р.</p>
+                      </div>
+                      <div class="price-new">
+                        <a class="products-link" href="#">15500 Р.</a>
+                      </div>
+                      <p class="mark-new">New</p>
+                    </section>
+                  </article>
+                </li>
+                <li class="catalog-item">
+                  <article class="product">
+                    <div class="product-image-wrapper">
+                      <img class="product-img" src="img/products/products-item-bosch6000.jpg" width="144" height="128" alt="Аккумуляторный перфоратор bosch со сверлом большого диаметра">
+                    </div>
+                    <div class="product-option">
+                      <a class="product-option-link-buy" href="#">Купить</a>
+                      <a class="product-option-link-bookmarks" href="#">В закладки</a>
+                    </div>
+                    <section class="product-description">
+                      <p class="products-title">Перфоратор BOSCH BFG 6000</p>
+                      <div class="price-old">
+                        <p class="products-price">30500 Р.</p>
+                      </div>
+                      <div class="price-new">
+                        <a class="products-link" href="#">25500 Р.</a>
+                      </div>
+                    </section>
+                  </article>
+                </li>
+                <li class="catalog-item">
+                  <article class="product">
+                    <div class="product-image-wrapper">
+                      <img class="product-img" src="img/products/products-item-bosch2000.jpg" width="127" height="112" alt="Аккумуляторный перфоратор bosch со сверлом малого диаметра">
+                    </div>
+                    <div class="product-option">
+                      <a class="product-option-link-buy" href="#">Купить</a>
+                      <a class="product-option-link-bookmarks" href="#">В закладки</a>
+                    </div>
+                    <section class="product-description">
+                      <p class="products-title">Перфоратор BOSCH BFG 2000</p>
+                      <div class="price-old">
+                        <p class="products-price"></p>
+                      </div>
+                      <div class="price-new">
+                        <a class="products-link" href="#">12500 Р.</a>
+                      </div>
+                      <p class="mark-new">New</p>
                     </section>
                   </article>
                 </li>
