@@ -21,9 +21,10 @@
 
             <form class="header-form-search" action="https://echo.htmlacademy.ru/" method="get">
               <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+                <path class="search-img" fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
                 </svg>
               <input class="header-top-search" type="text" name="search" placeholder="Поиск:">
+              <!-- <label for="search">Поиск:</label> -->
             </form>
             <a class="header-top-link header-top-favourite" href="#">Закладки: 0</a>
             <a class="header-top-link header-top-cart" href="#">Корзина: 0</a>
@@ -39,13 +40,15 @@
             <p class="header-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
           </section>
           <div class="header-user">
-            <a class="user-page sign-in" href="#">
-              <svg class="sign-in-img" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5"/>
-                <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z" fill="#C5C5C5"/>
-                </svg>Войти
-            </a>
-            <a class="user-page sign-up" href="#">Регистрация</a>
+            <div class="header-user-wrap">
+              <a class="user-page sign-in" href="#">
+                <svg class="sign-in-img" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z"/>
+                  <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"/>
+                  </svg>Войти
+              </a>
+              <a class="user-page sign-up" href="#">Регистрация</a>
+            </div>
           </div>
         </nav>
 
@@ -69,7 +72,7 @@
               <li class="sections-item sections-item-materials">
                 <h2 class="sections-name reset-title">Материалы</h2>
                 <a class="sections-link" href="#">Hа любой вкус</a>
-                <p class="mark-new">New</p>
+                <p class="sections-new">New</p>
               </li>
               <li class="sections-item sections-item-tools">
                 <h2 class="sections-name reset-title">Инструмент</h2>
@@ -90,15 +93,17 @@
               <li class="slide slide-1">
                 <h2 class="slider-title reset-title">Перфораторы</h2>
                 <p class="slider-description">Настоящие мужские игрушки</p>
+                <a class="slider-arrow slider-arrow-prev" href="#"></a>
+                <a class="slider-arrow slider-arrow-next" href="#"></a>
                 <a class="slider-link button button-decor slider-button" href="catalog.html">Открыть каталог</a>
               </li>
               <li class="slide slide-2">
                 <h2 class="slider-title reset-title">Дрели</h2>
                 <p class="slider-description">Соседям на радость!</p>
+                <a class="slider-arrow slider-arrow-prev" href="#"></a>
+                <a class="slider-arrow slider-arrow-next" href="#"></a>
                 <a class="slider-link button button-decor slider-button" href="catalog.html">Открыть каталог</a>
               </li>
-              <span class="slider-arrow slider-arrow-prev"></span>
-              <span class="slider-arrow slider-arrow-next"></span>
             </ul>
           </div>
         </section>
@@ -268,22 +273,22 @@
               </p>
             </div>
             <div class="services-menu">
-              <ul class="services-list-details reset-list">
-                <li class="services-items-details-link delivery-link">Доставка</li>
-                <li class="services-items-details-link guarantee-link">Гарантия</li>
-                <li class="services-items-details-link credit-link">Кредит</li>
+              <ul class="services-details-list reset-list">
+                <li class="services-details-item"><a class="services-details-link delivery-link" href="#">Доставка</a></li>
+                <li class="services-details-item"><a class="services-details-link guarantee-link" href="#">Гарантия</a></li>
+                <li class="services-details-item"><a class="services-details-link credit-link" href="#">Кредит</a></li>
               </ul>
               <div class="services-content services-content-delivery">
                 <h2 class="services-content-title reset-title">Доставка</h2>
-                <p class="services-content-description">Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно!
-                  Ведь мы неплохо заработаем,
+                <p class="services-content-description services-content-description-delivery">Мы с удовольствием доставим ваш товар прямо
+                  к вашему подъезду совершенно бесплатно!<br>
+                  Ведь мы неплохо заработаем,<br>
                   поднимая его на ваш этаж!
                 </p>
               </div>
               <div class="services-content services-content-guarantee">
                 <h2 class="services-content-title reset-title">Гарантия</h2>
-                <p class="services-content-description">Если купленный у нас товар поломается или заискрит,
+                <p class="services-content-description services-content-description-guarantee">Если купленный у нас товар поломается или заискрит,
                   а также в случае пожара, спровоцированного его
                     возгоранием,вы всегда можете быть уверены в нашей
                     гарантии. Мы обменяем сгоревший товар на новый.
@@ -292,7 +297,7 @@
               </div>
               <div class="services-content services-content-credit">
                 <h2 class="services-content-title reset-title">Кредит</h2>
-                <p class="services-content-description">Залезть в долговую яму стало проще!
+                <p class="services-content-description services-content-description-credit">Залезть в долговую яму стало проще!<br>
                   Кредитные консультанты придут вам на помощь.
                 </p>
                 <a class="services-content-link button button-decor" href="#">Отправить заявку</a>
@@ -306,8 +311,8 @@
         <section class="info">
           <section class="info-about">
             <h2 class="info-about-title reset-title">Компания «Техномарт»</h2>
-            <p class="info-about-description">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
-              Мы можем доставить ваш товар в самые отдаленные точки России!
+            <p class="info-about-description">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br>
+              <br>Мы можем доставить ваш товар в самые отдаленные точки России!
               Техномарт работает со многими транспортными компаниями:
             </p>
             <ul class="info-about-list reset-list">
