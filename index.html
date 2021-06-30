@@ -23,7 +23,7 @@
               <!-- <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="search-img" fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
                 </svg> -->
-              <input class="header-top-search" type="search" name="header-search" id="header-search">
+              <input class="header-top-search" type="text" name="header-search" id="header-search">
               <label for="header-search">Поиск:</label>
             </form>
             <a class="header-top-link header-top-favourite" href="#">Закладки: 0</a>
@@ -34,7 +34,7 @@
       </div>
       <div class="container">
         <nav class="header-middle">
-          <h1 class="header-middle-title reset-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+          <h1 class="header-middle-title reset-title">Интернет-магазин строительных материалов<br> и инструментов для ремонта</h1>
           <section class="header-info">
             <a class="header-contacts" href="tel:+78005558628">+7 800 555-86-28</a>
             <p class="header-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
@@ -417,35 +417,45 @@
     <section class="modal modal-feedback" id="myform">
       <div class="modal-feedback-top"></div>
       <form class="login-form" action="https://echo.htmlacademy.ru/" method="get">
-        <p>
-          <label for="name">Ваше имя:</label>
-          <input class="login-icon-name" type="name" id="name" name="name" placeholder="Имя Фамилия">
-        </p>
-        <p>
-          <label for="mail">Ваш e-mail:</label>
-          <input class="login-icon-mail" type="email" id="mail" name="login" placeholder="email@example.com">
-        </p>
-        <p>
-          <label for="text">Текст письма:</label>
-          <input type="text" id="text" name="text" placeholder="В свободной форме">
-        </p>
+        <div class="login-form-personal">
+          <p class="personal-name">
+            <label for="name">Ваше имя:</label>
+            <input class="login-icon-name" type="name" id="name" name="name" placeholder="Имя Фамилия">
+          </p>
+          <p class="personal-mail">
+              <label for="mail">Ваш e-mail:</label>
+              <input class="login-icon-mail" type="email" id="mail" name="login" placeholder="email@example.com">
+          </p>
+        </div>
+
+        <div class="personal-feedback">
+            <label for="feedback-content">Текст письма:</label>
+            <textarea class="personal-feedback-content" id="feedback-content" rows="4" cols="62"  placeholder="В свободной форме"></textarea>
+        </div>
+
         <div class="modal-bottom">
           <button class="modal-bottom-button button button-decor modal-feedback-button" type="button">Отправить</button>
         </div>
       </form>
-      <button class="modal-close" type="button"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="modal-close" type="button" aria-label="Закрыть">
+        <!-- <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
-        </svg>
+        </svg> -->
       </button>
 
     </section>
 
     <section  class=" modal modal-map" id="map">
       <div class="modal-map-top"></div>
-      <button class="modal-close" type="button">
-        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <h2 class="visually-hidden">Как до нас добраться?</h2>
+      <img class="modal-map-img" src="../img/bg-map-big.jpg" width="943" height="449" alt="г.Санкт-Петербург, наб. Pеки Карповки, 5, лит П">
+      <iframe src="https://www.google.ru/maps/search/%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F+%D1%80%D0%B5%D0%BA%D0%B8+%D0%9A%D0%B0%D1%80%D0%BF%D0%BE%D0%B2%D0%BA%D0%B8,+5+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3/@59.9694486,30.2902414,14z/data=!3m1!4b1?hl=en-GB"
+              width="943" height="449" allowfullscreentitle="г.Санкт-Петербург, наб. Pеки Карповки, 5, лит П">
+      </iframe>
+      <button class="modal-close" type="button" aria-label="Закрыть">
+        <!-- <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z" fill="#EE3643"/>
-        </svg>
+        </svg> -->
       </button>
     </section>
   </body>
