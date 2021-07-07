@@ -7,17 +7,16 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,
-    wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap subset=latin,cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swapsubset=latin,cyrillic">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="header">
       <div class="header-top-wrapper">
         <div class="container">
           <nav class="header-top">
-            <a class="header-top-link header-top-logo" href="index.html"><img src="img/logo.png" width="108" height="18" alt="Логотип техномарта"></a>
+            <a class="header-top-link header-top-logo" href="index.html"><img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип техномарта"></a>
 
             <form class="header-form-search" action="https://echo.htmlacademy.ru/" method="get">
               <input class="header-top-search" type="text" name="header-search" id="header-search" placeholder="Поиск:">
@@ -27,7 +26,7 @@
               <label for="header-search" class="visually-hidden">Поиск:</label>
             </form>
             <a class="header-top-link header-top-favourite" href="#">Закладки: 0</a>
-            <a class="header-top-link header-top-cart" href="#">Корзина: 10</a>
+            <a class="header-top-link header-top-cart header-top-cart-filled" href="#">Корзина: 10</a>
             <a class="header-top-link header-top-order" href="#">Оформить заказ</a>
           </nav>
         </div>
@@ -52,12 +51,6 @@
                   <path d="M2.10598 13.952V3.048C2.12398 2.672 2.27698 1.991 3.11598 1.991H8.14297V0H3.11598C0.937975 0 0.111975 1.81 0.0869751 3.027V13.973C0.111975 15.189 0.937975 17 3.11598 17H8.14297V15.01H3.11598C2.27698 15.01 2.12398 14.327 2.10598 13.952Z"/>
                   </svg>
               </a>
-              <!-- <a class="logout">
-                <svg class="logout-img" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 8.5L11.125 0V6H5.125V11H11.125V17L20 8.5Z"/>
-                  <path d="M2.10598 13.952V3.048C2.12398 2.672 2.27698 1.991 3.11598 1.991H8.14297V0H3.11598C0.937975 0 0.111975 1.81 0.0869751 3.027V13.973C0.111975 15.189 0.937975 17 3.11598 17H8.14297V15.01H3.11598C2.27698 15.01 2.12398 14.327 2.10598 13.952Z"/>
-                  </svg>
-              </a> -->
             </div>
             <ul class="header-user-additional reset-list">
               <li><a class="user-orders" href="#">Мои заказы</a></li>
@@ -168,7 +161,7 @@
                   </ul>
                 </fieldset>
 
-                <button class="filter-button" type="submit" action="https://echo.htmlacademy.ru/">Показать</button>
+                <button class="filter-button" type="submit">Показать</button>
               </form>
 
             </section>
@@ -411,7 +404,7 @@
     <footer class="footer">
       <div class="container">
         <section class="footer-top">
-          <a class="footer-top-logo" href="index.html"><img src="img/logo.png" width="138" height="23" alt="Логотип техномарта"></a>
+          <a class="footer-top-logo" href="index.html"><img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип техномарта"></a>
           <ul class="footer-top-menu reset-list">
             <li class="footer-top-menu-item"><a class="footer-top-menu-link" href="#">Компания</a></li>
             <li class="footer-top-menu-item"><a class="footer-top-menu-link" href="#">Новости</a></li>
@@ -472,16 +465,18 @@
 
     </footer>
 
-      <section class=" modal modal-cart modal-hidden">
-        <div class="modal-cart-top"></div>
-        <div class="add-success">
-          <h2 class="modal-cart-title reset-title">Товар добавлен в корзину!</h2>
-        </div>
-        <form class="form-cart" action="https://echo.htmlacademy.ru/" method="get">
-          <a class="checkout success button button-decor cart-button" href="#">Оформить заказ</a>
-          <a class="continue-shopping" href="catalog.html">Продолжить покупки</a>
-        </form>
-        <button class="modal-close" type="button"></button>
-      </section>
+    <section class=" modal modal-cart modal-hidden">
+      <div class="modal-cart-top"></div>
+      <div class="add-success">
+        <h2 class="modal-cart-title reset-title">Товар добавлен в корзину!</h2>
+      </div>
+      <form class="form-cart" action="https://echo.htmlacademy.ru/" method="get">
+        <a class="checkout success button cart-button" href="#">Оформить заказ</a>
+        <a class="continue-shopping" href="catalog.html">Продолжить покупки</a>
+      </form>
+      <button class="modal-close" type="button"></button>
+    </section>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>

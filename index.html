@@ -7,10 +7,9 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,
-    wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swap subset=latin,cyrillic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:wght@400;700&display=swapsubset=latin,cyrillic">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="header">
@@ -18,7 +17,7 @@
         <div class="container">
           <nav class="header-top">
             <a class="header-top-link header-top-logo" href="index.html">
-              <img src="img/logo.png" width="108" height="18" alt="Логотип техномарта">
+              <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип техномарта">
             </a>
 
             <form class="header-form-search" action="https://echo.htmlacademy.ru/" method="get">
@@ -47,7 +46,7 @@
                 <svg class="sign-in-img" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z"/>
                   <path d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"/>
-                  </svg>Войти
+                </svg>Войти
               </a>
               <a class="user-page sign-up" href="#">Регистрация</a>
             </div>
@@ -95,23 +94,23 @@
 
               <li class="slider">
                 <ul class="slider-list reset-list">
-                  <li class="slider-item slide-1">
+                  <li class="slider-item slide-1 slide-hidden">
                     <h2 class="slider-title reset-title">Перфораторы</h2>
                     <p class="slider-description">Настоящие мужские игрушки</p>
                   </li>
-                  <li class="slider-item slide-2">
+                  <li class="slider-item slide-2 slide-hidden">
                     <h2 class="slider-title reset-title">Дрели</h2>
                     <p class="slider-description">Соседям на радость!</p>
                   </li>
                 </ul>
-                <div class="slider-control">
-                  <ul class="slider-control-list reset-list">
-                    <li class="slider-control-item item-left"></li>
-                    <li class="slider-control-item item-right"></li>
+                <div class="slider-controls">
+                  <ul class="slider-controls-list reset-list">
+                    <li><button class="slider-dot-item slider-left" onclick="currentSlide(1)"></button></li>
+                    <li><button class="slider-dot-item slider-right" onclick="currentSlide(2)"></button></li>
                   </ul>
-                  <button class="slider-arrow slider-arrow-prev" type="button" value="back"></button>
-                  <button class="slider-arrow slider-arrow-next" type="button" value="back"></button>
-                  <a class="slider-link button button-decor slider-button" href="catalog.html">Открыть каталог</a>
+                  <button class="slider-arrow slider-arrow-prev" onclick="plusSlides(-1)" type="button" value="back"></button>
+                  <button class="slider-arrow slider-arrow-next" onclick="plusSlides(1)" type="button" value="next"></button>
+                  <a class="slider-button button" href="catalog.html">Открыть каталог</a>
                 </div>
               </li>
             </ul>
@@ -121,7 +120,7 @@
 
         <section class="headline">
           <h2 class="headline-name reset-title">Популярные товары:</h2>
-          <a class="headline-link button button-decor headline-button" href="#">Все популярные товары</a>
+          <a class="headline-button button" href="#">Все популярные товары</a>
         </section>
 
         <section class="catalog-promo">
@@ -213,7 +212,7 @@
 
         <section class="headline">
           <h2 class="headline-name reset-title">Популярные производители:</h2>
-          <a class="headline-link button button-decor headline-button" href="#">Все производители</a>
+          <a class="headline-button button" href="#">Все производители</a>
         </section>
 
         <section class="brands">
@@ -289,7 +288,7 @@
                     поднимая его на ваш этаж!
                   </p>
                 </li>
-                <li class="services-content-item services-content-guarantee">
+                <li class="services-content-item services-content-guarantee services-content-hidden">
                   <h2 class="services-content-title reset-title">Гарантия</h2>
                   <p class="services-content-description services-content-description-guarantee">Если купленный у нас товар поломается или заискрит,
                     а также в случае пожара, спровоцированного его
@@ -298,12 +297,12 @@
                     Дом уж восстановите как-нибудь сами.
                   </p>
                 </li>
-                <li class="services-content-item services-content-credit">
+                <li class="services-content-item services-content-credit services-content-hidden">
                   <h2 class="services-content-title reset-title">Кредит</h2>
                   <p class="services-content-description services-content-description-credit">Залезть в долговую яму стало проще!<br>
                     Кредитные консультанты придут вам на помощь.
                   </p>
-                  <a class="services-content-link button button-decor" href="#">Отправить заявку</a>
+                  <a class="services-content-link button" href="#">Отправить заявку</a>
                 </li>
               </ul>
             </div>
@@ -325,7 +324,7 @@
               <li class="info-about-item">Автотрейдинг</li>
               <li class="info-about-item">ЖелДорЭкспедиция</li>
             </ul>
-            <a class="info-about-link button button-decor info-about-button" href="#">Подробнее о компании</a>
+            <a class="info-about-button button" href="#">Подробнее о компании</a>
           </section>
 
           <section class="info-contacts">
@@ -335,7 +334,7 @@
             <a class="info-contacts-map-link" href="#">
               <img class="info-contacts-map" src="img/bg-map.jpg" width="300" height="158" alt="Наб. Реки Карповки, 5 корпус П, Санкт-Петербург">
             </a>
-            <a class="info-contacts-link button button-decor info-contacts-button" href="#">Заблудились? Напишите нам!</a>
+            <button class="info-contacts-button button">Заблудились? Напишите нам!</button>
           </section>
         </section>
       </div>
@@ -345,7 +344,7 @@
     <footer class="footer">
       <div class="container">
         <section class="footer-top">
-          <a class="footer-top-logo" href="index.html"><img src="img/logo.png" width="138" height="23" alt="Логотип техномарта"></a>
+          <a class="footer-top-logo" href="index.html"><img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип техномарта"></a>
           <ul class="footer-top-menu reset-list">
             <li class="footer-top-menu-item"><a class="footer-top-menu-link" href="#">Компания</a></li>
             <li class="footer-top-menu-item"><a class="footer-top-menu-link" href="#">Новости</a></li>
@@ -405,17 +404,17 @@
       </section>
     </footer>
 
-    <section class="modal modal-feedback modal-hidden" id="myform">
+    <section class="modal modal-feedback modal-hidden" id="modal-feedback">
       <div class="modal-feedback-top"></div>
       <form class="login-form" action="https://echo.htmlacademy.ru/" method="POST">
         <div class="login-form-personal">
           <p class="personal-name">
             <label for="name">Ваше имя:</label>
-            <input class="login-icon-name" type="name" id="name" name="name" placeholder="Имя Фамилия">
+            <input class="feedback-name" type="text" id="name" name="name" placeholder="Имя Фамилия">
           </p>
           <p class="personal-mail">
               <label for="mail">Ваш e-mail:</label>
-              <input class="login-icon-mail" type="email" id="mail" name="login" placeholder="email@example.com">
+              <input class="feedback-email" type="email" id="mail" name="login" placeholder="email@example.com">
           </p>
         </div>
 
@@ -425,25 +424,33 @@
         </div>
 
         <div class="modal-bottom">
-          <button class="modal-bottom-button button button-decor modal-feedback-button" type="button">Отправить</button>
+          <button class="modal-bottom-button button modal-feedback-button" type="button">Отправить</button>
         </div>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
-
     </section>
 
-    <script src="script.js"></script>
-
-
-    <section  class=" modal modal-map modal-hidden" id="map">
+    <section  class="modal modal-map modal-hidden" id="map">
       <div class="modal-map-top"></div>
       <h2 class="visually-hidden">Как до нас добраться?</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31948.04504197433!2d30.272731687174378!3d59.969423663083205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L_QvtCy0LrQuCwgNSDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsw!5e0!3m2!1sen!2sua!4v1625154845565!5m2!1sen!2sua"
-       width="943" height="449" style="border:0;" allowfullscreen="г.Санкт-Петербург, наб. Pеки Карповки, 5, лит П" loading="lazy">
+       width="943" height="449" style="border:0;" allowfullscreen="allowfullscreen" loading="lazy">
       </iframe>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
+
+    <section class=" modal modal-cart modal-hidden">
+      <div class="modal-cart-top"></div>
+      <div class="add-success">
+        <h2 class="modal-cart-title reset-title">Товар добавлен в корзину!</h2>
+      </div>
+      <form class="form-cart" action="https://echo.htmlacademy.ru/" method="get">
+        <a class="checkout success button cart-button" href="#">Оформить заказ</a>
+        <a class="continue-shopping" href="catalog.html">Продолжить покупки</a>
+      </form>
+      <button class="modal-close" type="button"></button>
+    </section>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>
-
-
