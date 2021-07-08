@@ -410,11 +410,11 @@
         <div class="login-form-personal">
           <p class="personal-name">
             <label for="name">Ваше имя:</label>
-            <input class="feedback-name" type="text" id="name" name="name" placeholder="Имя Фамилия">
+            <input class="feedback-name" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
           </p>
           <p class="personal-mail">
               <label for="mail">Ваш e-mail:</label>
-              <input class="feedback-email" type="email" id="mail" name="login" placeholder="email@example.com">
+              <input class="feedback-email" type="email" id="mail" name="login" placeholder="email@example.com" required>
           </p>
         </div>
 
@@ -424,7 +424,7 @@
         </div>
 
         <div class="modal-bottom">
-          <button class="modal-bottom-button button modal-feedback-button" type="button">Отправить</button>
+          <button class="modal-bottom-button button modal-feedback-button" type="submit">Отправить</button>
         </div>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
@@ -445,10 +445,10 @@
         <h2 class="modal-cart-title reset-title">Товар добавлен в корзину!</h2>
       </div>
       <form class="form-cart" action="https://echo.htmlacademy.ru/" method="get">
-        <a class="checkout success button cart-button" href="#">Оформить заказ</a>
-        <a class="continue-shopping" href="catalog.html">Продолжить покупки</a>
+        <button class="checkout success button cart-button" type="button">Оформить заказ</button>
+        <button class="continue-shopping" type="button">Продолжить покупки</button>
       </form>
-      <button class="modal-close" type="button"></button>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
 
     <script src="js/script.min.js"></script>

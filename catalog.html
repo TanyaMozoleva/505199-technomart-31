@@ -101,15 +101,16 @@
                       <div class="scale">
                         <div class="bar" style="width: 80%; margin-left: 0%"></div>
                       </div>
-                      <div class="toggle toggle-min" tabindex="0" style="left: 0%">
+                      <div class="toggle toggle-min" tabindex="0" style="left: 8%">
                       </div>
-                      <div class="toggle toggle-max" tabindex="0" style="left: 70%"></div>
+                      <div class="toggle toggle-max" tabindex="0" style="left: 73%"></div>
                     </div>
                     <div class="price-controls">
                       <label class="min-price">
                         <input type="text" name="min-price" value="0">
                       </label>
-                      <label class="max-price"><span class="price-dash">-</span>
+                      <span class="price-dash">_</span>
+                      <label class="max-price">
                         <input type="text" name="max-price" value="30000">
                       </label>
                     </div>
@@ -170,9 +171,9 @@
             <div class="sort">
               <h2 class="sort-title reset-title">Сортировка:</h2>
               <ul class="sort-list reset-list">
-                <li><a class="sort-link" href="#">По цене</a></li>
-                <li><a class="sort-link" href="#">По типу</a></li>
-                <li><a class="sort-link" href="#">По функционалу</a></li>
+                <li class="sort-item"><a class="sort-link" href="#">По цене</a></li>
+                <li class="sort-item"><a class="sort-link" href="#">По типу</a></li>
+                <li class="sort-item"><a class="sort-link" href="#">По функционалу</a></li>
               </ul>
               <ul class="sort-triangle reset-list">
                 <li>
@@ -471,10 +472,10 @@
         <h2 class="modal-cart-title reset-title">Товар добавлен в корзину!</h2>
       </div>
       <form class="form-cart" action="https://echo.htmlacademy.ru/" method="get">
-        <a class="checkout success button cart-button" href="#">Оформить заказ</a>
-        <a class="continue-shopping" href="catalog.html">Продолжить покупки</a>
+        <button class="checkout success button cart-button" type="button">Оформить заказ</button>
+        <button class="continue-shopping" type="button">Продолжить покупки</button>
       </form>
-      <button class="modal-close" type="button"></button>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
 
     <script src="js/script.min.js"></script>

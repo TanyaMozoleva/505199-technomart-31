@@ -124,7 +124,7 @@ window.addEventListener('keydown', function(evt) {
 
 /* Slider */
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -136,9 +136,9 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName('slider-item');
-  var dots = document.getElementsByClassName('slider-dot-item');
+  let i;
+  const slides = document.getElementsByClassName('slider-item');
+  const dots = document.getElementsByClassName('slider-dot-item');
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
