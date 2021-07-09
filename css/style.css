@@ -1068,6 +1068,7 @@ triangle-top-img {
   line-height: 18px;
   text-align: center;
   color: var(--filter-dash);
+  padding-top: 9px;
 }
 
 .price-controls input {
@@ -1259,6 +1260,7 @@ filter-input-radio:disabled +label::before{
   border: 1px solid var(--basic-border-light);
   border-radius: 2px;
   margin-right: 6px;
+  box-sizing: border-box;
 }
 
 .pagination-link {
@@ -1269,6 +1271,7 @@ filter-input-radio:disabled +label::before{
 
 .pagination-link-next {
   width: 140px;
+  padding-left: 3px;
 }
 
 .pagination-item:hover {
@@ -1319,6 +1322,8 @@ filter-input-radio:disabled +label::before{
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*--------------------Slider--------------------*/
@@ -1497,7 +1502,7 @@ filter-input-radio:disabled +label::before{
 /*--------------------Catalog---------------------*/
 
 .catalog {
-  margin-bottom: 39px;
+  margin-bottom: 42px;
 }
 
 .catalog-promo {
@@ -1512,11 +1517,10 @@ filter-input-radio:disabled +label::before{
   display: grid;
   grid-template-columns: 220px 220px 220px 220px;
   column-gap: 20px;
-  row-gap: 18px;
+  row-gap: 20px;
 }
 
 .product {
-  /* display: flex; */
   flex-direction: column;
   box-sizing: border-box;
   width: 220px;
@@ -1545,6 +1549,18 @@ filter-input-radio:disabled +label::before{
   background-color: var(--basic-white);
 }
 
+.bosh-bfg6 {
+  padding-right: 9px;
+}
+
+.bosh-bfg3 {
+  padding-right: 11px;
+}
+
+.bosh-bfg2 {
+  padding-right: 11px;
+}
+
 .product-img {
   display: block;
   margin-left: auto;
@@ -1565,9 +1581,7 @@ filter-input-radio:disabled +label::before{
 }
 
 .product-description {
-  /* min-height: 183px; */
   box-sizing: border-box;
-  /* display: flex; */
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -1585,7 +1599,7 @@ filter-input-radio:disabled +label::before{
   margin-right: auto;
   margin-bottom: 0;
   margin-top: 0;
-  padding-top: 15px;
+  padding-top: 12px;
   text-align: center;
 }
 
@@ -1595,6 +1609,7 @@ filter-input-radio:disabled +label::before{
   justify-content: center;
   align-items: center;
   margin-bottom: 14px;
+  height: 22px;
 }
 
 .products-price {
@@ -1612,20 +1627,22 @@ filter-input-radio:disabled +label::before{
   padding-top: 4px;
 }
 
+
 .products-link {
   display: block;
   box-sizing: border-box;
   font-family: inherit;
   width: 141px;
   height: 38px;
-  padding: 10px 44px 10px 32px;
+  padding: 10px 44px 10px 33px;
   font-size: 17px;
   line-height: 18px;
   background-image: url("../img/red-button.png");
   color: var(--basic-white);
   text-align: center;
   align-items: center;
-  margin-bottom: 21px;
+  margin-top: 0;
+  margin-bottom: 20px;
   margin-right: 34px;
   margin-left: 43px;
 }
@@ -1813,6 +1830,17 @@ filter-input-radio:disabled +label::before{
 .services-details-list {
   grid-column: 1/2;
   width: 240px;
+  position: relative;
+}
+
+.services-details-list::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  left: 230px;
+  bottom: 5px;
+  background-image: url("../img/Object.png");
 }
 
 .services-details-item {
@@ -1824,7 +1852,7 @@ filter-input-radio:disabled +label::before{
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
-  box-shadow: 4px 0 4px 0 var(--black-shadow);
+  /* box-shadow: 4px 0 4px 0 var(--black-shadow); */
 }
 
 .services-details-link {
@@ -1902,12 +1930,23 @@ filter-input-radio:disabled +label::before{
   width: 195px;
   height: 38px;
   padding-top: 10px;
+  /* position: relative; */
 }
 
 .services-content-delivery {
+  position: relative;
+}
+
+.services-content-delivery::after {
+  content: "";
+  width: 468px;
+  height: 261px;
+  position: absolute;
+  top: 18px;
+  left: 150px;
   background-image: url("../img/bg-delivery.png");
   background-repeat: no-repeat;
-  background-position: top 9px right;
+
 }
 
 .services-content-guarantee {
@@ -2253,6 +2292,7 @@ filter-input-radio:disabled +label::before{
 /*--------------------Modal-------------------*/
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -2266,16 +2306,12 @@ filter-input-radio:disabled +label::before{
   line-height: 24px;
 }
 
-.modal-hidden {
-  display: none;
-}
-
 .modal-show {
   display: block;
   animation: bounce 0.6s;
 }
 
-modal-error {
+.modal-error {
   animation: shake 0.6s;
 }
 
@@ -2353,8 +2389,8 @@ login-form input {
   display: block;
   width: 620px;
   margin-bottom: 11px;
-
 }
+
 personal-feedback-content {
   display: block;
   resize: horizontal;
@@ -2503,6 +2539,7 @@ modal-map-img {
   text-transform: uppercase;
   font-family: "Cuprum";
   font-weight: 400;
+  cursor: pointer;
 }
 
 .checkout {

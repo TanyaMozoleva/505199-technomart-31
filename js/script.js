@@ -13,6 +13,9 @@ if (feedbackPopup) {
   const feedbackUserEmail = feedbackPopup.querySelector('#mail');
   const feedbackUserEmailContent = feedbackPopup.querySelector('#feedback-content');
 
+  feedbackUserName.removeAttribute('required');
+  feedbackUserEmail.removeAttribute('required');
+
 
   let isStorageSupport = true;
   let storage = "";
@@ -26,7 +29,7 @@ if (feedbackPopup) {
 
   infoContactsLink.addEventListener('click', function(evt) {
     evt.preventDefault();
-    feedbackPopup.classList.remove('modal-hidden');
+    feedbackPopup.classList.add('modal-show');
 
     if (storage) {
       feedbackUserName.value = storageUserName;
@@ -39,7 +42,7 @@ if (feedbackPopup) {
 
   feedbackClose.addEventListener('click', function(evt) {
     evt.preventDefault();
-    feedbackPopup.classList.add('modal-hidden');
+    feedbackPopup.classList.remove('modal-show');
     feedbackPopup.classList.remove('modal-error');
   });
 
@@ -57,9 +60,9 @@ if (feedbackPopup) {
 
   window.addEventListener('keydown', function(evt) {
     if (evt.keyCode === 27) {
-      if (!feedbackPopup.classList.contains('modal-hidden')) {
+      if (feedbackPopup.classList.contains('modal-show')) {
         evt.preventDefault();
-        feedbackPopup.classList.add('modal-hidden');
+        feedbackPopup.classList.remove('modal-show');
         feedbackPopup.classList.remove('modal-error');
       }
     }
@@ -77,19 +80,19 @@ if (mapPopup) {
 
   mapLink.addEventListener('click', function(evt) {
     evt.preventDefault();
-    mapPopup.classList.remove('modal-hidden');
+    mapPopup.classList.add('modal-show');
   });
 
   mapClose.addEventListener('click', function(evt) {
     evt.preventDefault();
-    mapPopup.classList.add('modal-hidden');
+    mapPopup.classList.remove('modal-show');
   });
 
   window.addEventListener('keydown', function(evt) {
     if (evt.keyCode === 27) {
-      if (!mapPopup.classList.contains('modal-hidden')) {
+      if (mapPopup.classList.contains('modal-show')) {
         evt.preventDefault();
-        mapPopup.classList.add('modal-hidden');
+        mapPopup.classList.remove('modal-show');
       }
     }
   });
@@ -103,42 +106,35 @@ const cartClose = cartPopup.querySelector('.modal-close');
 cartLinks.forEach(function(element) {
   element.addEventListener('click', function(evt) {
     evt.preventDefault();
-    cartPopup.classList.remove('modal-hidden');
+    cartPopup.classList.add('modal-show');
   });
 });
 
 cartClose.addEventListener('click', function(evt) {
   evt.preventDefault();
-  cartPopup.classList.add('modal-hidden');
+  cartPopup.classList.remove('modal-show');
 });
 
 window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27) {
-    if (!cartPopup.classList.contains('modal-hidden')) {
+    if (cartPopup.classList.contains('modal-show')) {
       evt.preventDefault();
-      cartPopup.classList.add('modal-hidden');
+      cartPopup.classList.remove('modal-hidden');
     }
   }
 });
 
-
 /* Slider */
+
+const slides = document.getElementsByClassName('slider-item');
+const dots = document.getElementsByClassName('slider-dot-item');
 
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
 
 function showSlides(n) {
   let i;
-  const slides = document.getElementsByClassName('slider-item');
-  const dots = document.getElementsByClassName('slider-dot-item');
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -150,6 +146,14 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = 'block';
   dots[slideIndex-1].className += ' active-dot';
+}
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
 
