@@ -36,7 +36,6 @@
 
   --basic-dark-red: #CA2C37;
   --extra-dark-red: #BA2732;
-  --dark-logo-side: #5c151a;
 
   --basic-dark-green: #5FBB2D;
   --extra-dark-green: #518534;
@@ -154,20 +153,6 @@ fieldset {
   position: relative;
 }
 
-.header-top-logo {
-  background-color: var(--basic-red);
-  box-shadow: 0 5px 0 0  var(--extra-dark-red);
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.header-top-logo:active {
-  background-color: var(--extra-dark-red);
-  box-shadow: 0 5px 0 0 var(--dark-logo-side);
-  opacity: 0.76;
-}
-
 .header-form-search {
   box-sizing: border-box;
   width: 270px;
@@ -209,7 +194,6 @@ fieldset {
   box-sizing: border-box;
   width: 270px;
   min-height: 42px;
-  font-family: "Cuprum";
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -266,6 +250,19 @@ fieldset {
   padding-left: 44px;
 }
 
+.header-top-logo {
+  width: 220px;
+  height: 47px;
+  padding-bottom: 5px;
+  padding-left: 56px;
+  background-color: var(--basic-red);
+  box-shadow: inset 0 -5px 0 0 var(--logo-shadow);
+}
+
+.header-top-logo:active {
+  background-color: var(--extra-dark-red);
+}
+
 .header-top-favourite {
   padding: 9px 24px 9px 43px;
 }
@@ -274,11 +271,6 @@ fieldset {
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 49px;
-}
-
-.header-top-logo {
-  width: 220px;
-  padding-left: 56px;
 }
 
 .header-top-favourite::before,
@@ -451,7 +443,8 @@ fieldset {
   flex-wrap: nowrap;
 }
 
-.user-page {
+.user-link {
+  width: 299px;
   display: block;
   box-sizing: border-box;
   display: flex;
@@ -466,6 +459,10 @@ fieldset {
   padding-top: 12px;
   padding-bottom: 12px;
   cursor: pointer;
+}
+
+.user-link:hover {
+  fill: var(--basic-grey);
 }
 
 .sign-in {
@@ -508,32 +505,22 @@ fieldset {
   color: var(--basic-light-grey);
 }
 
-.icon-login:hover {
-  fill: var(--basic-grey);
-}
-
-.user-page-name {
+.user-link-name {
   font-weight: 400;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   padding-left: 16px;
   padding-right: 12px;
-}
-
-.user-page-name:hover {
   color: var(--basic-black);
 }
 
-.user-page-name:active {
+.user-link:active .user-link-name {
   color: var(--basic-light-grey);
 }
 
-.icon-login {
-  width: 299px;
-}
 
-.icon-login-img {
+.user-link-icon {
   padding-top: 1px;;
   padding-left: 15px;
   padding-right: 5px;
@@ -549,14 +536,19 @@ fieldset {
   padding-left: 10px;
 }
 
-.icon-login-img,
+.user-link-icon,
 .logout-img {
   fill: var(--basic-light-grey);
 }
 
-.icon-login-img:hover,
+.user-link:hover .user-link-icon,
 .logout-img:hover {
   fill: var(--basic-grey);
+}
+
+.user-link:active .user-link-icon,
+.logout-img:active {
+  fill: var(--basic-light-grey);
 }
 
 .header-user-additional {
@@ -891,7 +883,6 @@ fieldset {
 
 .sort-link {
   display: block;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -900,40 +891,26 @@ fieldset {
   position: relative;
 }
 
-
-.sort-link:not(.sort-link-active)::after {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: 1px;
+.sort-link:not(.sort-link-active) {
   border-bottom: 1px dotted var(--basic-red);
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
-.sort-link:hover::after {
+.sort-link:not(.sort-link-active):hover {
   border-bottom: 1px solid var(--basic-red);
-}
-
-.sort-link:active::after {
-  border-bottom: none;
-}
-
-.sort-link:hover {
   color: var(--basic-black);
 }
 
-.sort-link:active {
+.sort-link:not(.sort-link-active):active {
+  border-bottom: none;
   color: var(--basic-red);
 }
 
 .sort-link-active {
   color: var(--basic-red);
+  cursor: default;
 }
 
-.sort-triangle {
+.sort-triangles {
   display: flex;
   width: 50px;
   margin-right: 14px;
@@ -967,14 +944,15 @@ triangle-top-img {
 
 .triangle-active {
   fill: var(--basic-red);
+  cursor: default;
 }
 
-.triangle-top-img:hover,
+.triangle-top-img:not(.triangle-active):hover,
 .triangle-bottom-img:hover {
   fill: var(--basic-black);
 }
 
-.triangle-top-img:active,
+.triangle-top-img:not(.triangle-active):active,
 .triangle-bottom-img:active {
   fill: var(--basic-red);
 }
@@ -1110,13 +1088,13 @@ triangle-top-img {
   margin-top: 6px;
 }
 
-.filter-manufacturer-items,
-.filter-accumulator-items {
+.filter-manufacturer-item,
+.filter-accumulator-item {
   margin-bottom: 20px;
 }
 
-.filter-manufacturer-items label,
-.filter-accumulator-items label {
+.filter-manufacturer-item label,
+.filter-accumulator-item label {
   font-family: "PT Sans", "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -1126,13 +1104,13 @@ triangle-top-img {
   padding-left: 35px;
 }
 
-.filter-manufacturer-items label:active,
-.filter-accumulator-items label:active {
+.filter-manufacturer-item label:active,
+.filter-accumulator-item label:active {
   color: var(--special-black);
 }
 
-.filter-manufacturer-items label,
-.filter-accumulator-items label {
+.filter-manufacturer-item label,
+.filter-accumulator-item label {
   position: relative;
   display: block;
   cursor: pointer;
@@ -1480,7 +1458,6 @@ filter-input-radio:disabled +label::before{
   box-sizing: border-box;
   color: var(--basic-white);
   display: block;
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -1541,7 +1518,6 @@ filter-input-radio:disabled +label::before{
   width: 220px;
   min-height: 318px;
   border: 1px solid var(--basic-border);
-  font-family: "PT Sans", "Open Sans", sans-serif;
   position: relative;
   overflow: hidden;
 }
@@ -1600,6 +1576,7 @@ filter-input-radio:disabled +label::before{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  font-family: "PT Sans", "Open Sans", sans-serif;
 }
 
 .products-title {
@@ -1684,7 +1661,6 @@ filter-input-radio:disabled +label::before{
 /*----------Products-option----------*/
 
 .product-option {
-  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   width: 184px;
@@ -2553,7 +2529,6 @@ modal-map-img {
   line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
   cursor: pointer;
 }
